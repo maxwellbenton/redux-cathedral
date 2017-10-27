@@ -1,7 +1,7 @@
 export const toggleTile = (payload) => {
- return {
+  return {
  type: 'TOGGLE_TILE',
- tile: payload.tileData, //{position: [x,y], color: playerColor
+ tile: payload //{position: [x,y], color: playerColor
  }
 }
 

@@ -4,14 +4,20 @@ const gameBoard = (state = {
 }, action) => {
   switch (action.type) {
     case 'TOGGLE_TILE':
+      
       return { ...state,
-        tiles: state.tiles.map(tile => {
-          if(tile.position === action.tile.position) {
-            return action.tile
-          } else {
-            return tile
-          }
-        })
+        tiles: state.tiles.map(row => {
+          return row.map(tile => {
+            if(tile.position[0] === action.tile.position[0] && tile.position[1] === action.tile.position[1]) {
+              return {...tile, color: action.tile.color, player: action.tile.player}
+            } else {
+              return tile
+            }
+          })
+        }
+      ), availableTiles: state.availableTiles.map(row => {
+        return row.filter(tile => !(tile.position[0] === action.tile.position[0] && tile.position[1] === action.tile.position[1]))
+      })
       };
     default:
       return state

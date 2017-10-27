@@ -1,13 +1,13 @@
 import React from 'react';
-import ReactDOM, {render} from 'react-dom';
+import {render} from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import todoApp from './reducers'
+import tileGameApp from './reducers'
 
-let store = createStore(todoApp)
+let store = createStore(tileGameApp)
 
 render(
   <Provider store={store}>
