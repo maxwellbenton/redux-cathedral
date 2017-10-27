@@ -1,13 +1,14 @@
 
 import { connect } from 'react-redux'
-import { switchPlayer, toggleTile } from './actions'
+import { switchPlayer, toggleTile, selectPiece, placePiece, returnPiece } from './actions'
 import Game from './Game'
 
 const mapStateToProps = state => {
   return {
     player: state.playerInfo.player,
     players: state.playerInfo.players,
-    game: state.gameInfo
+    game: state.gameInfo,
+    pieceData: state.pieceData
   }
 }
 
@@ -16,6 +17,15 @@ const mapDispatchToProps = dispatch => {
     handleTileClick: (tileData) => {
       dispatch(switchPlayer())
       dispatch(toggleTile(tileData))
+    },
+    handlePieceSelection: (pieceData) => {
+      dispatch(selectPiece(pieceData))
+    },
+    handlePiecePlacement: (pieceData) => {
+      dispatch(placePiece(pieceData))
+    },
+    handlePieceReturn: (pieceData) => {
+      dispatch(returnPiece(pieceData))
     }
   }
 }

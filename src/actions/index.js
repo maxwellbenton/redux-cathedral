@@ -12,14 +12,20 @@ export const switchPlayer = () => {
   }
 }
 
-export const addPlayer = () => {
+export const selectPiece = () => {
   return {
-    type: 'ADD_PLAYER'
+    type: 'SELECT_PIECE'
   }
 }
 
-export const removePlayer = () => {
+export const placePiece = () => {
   return {
-    type: 'REMOVE_PLAYER'
+    type: 'PLACE_PIECE'
+  }
+}
+
+export const returnPiece = () => {
+  return {
+    type: 'RETURN_PIECE'
   }
 }
