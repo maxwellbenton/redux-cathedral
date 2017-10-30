@@ -11,8 +11,9 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
-        <PieceContainer />
         <GameContainer />
+        <PieceContainer />
+        
         <OpponentContainer />
       </div>
     );

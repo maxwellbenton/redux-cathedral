@@ -12,9 +12,10 @@ export const switchPlayer = () => {
   }
 }
 
-export const selectPiece = () => {
+export const selectPiece = (pieceData) => {
   return {
-    type: 'SELECT_PIECE'
+    type: 'SELECT_PIECE',
+    pieceData
   }
 }
 
