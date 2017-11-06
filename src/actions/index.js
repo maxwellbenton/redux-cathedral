@@ -30,3 +30,8 @@ export const returnPiece = () => {
     type: 'RETURN_PIECE'
   }
 }
+export const rotatePiece = () => {
+  return {
+    type: 'ROTATE_PIECE'
+  }
+}

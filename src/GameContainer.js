@@ -1,6 +1,6 @@
 
 import { connect } from 'react-redux'
-import { switchPlayer, toggleTile, selectPiece, placePiece, returnPiece } from './actions'
+import { switchPlayer, toggleTile, selectPiece, placePiece, returnPiece, } from './actions'
 import Game from './Game'
 
 const mapStateToProps = state => {

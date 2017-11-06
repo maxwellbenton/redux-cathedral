@@ -33,7 +33,7 @@ const originalTileSet = () => {
     for (let n = 0; n < 10; n++) {
       tiles[m][n] = {
         position: [m, n],
-        color: `#${m}${n}${m}`,
+        color: `#AAA`,
         player: 0
       }
     }
